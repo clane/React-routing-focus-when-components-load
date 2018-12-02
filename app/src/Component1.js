@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Helmet } from "react-helmet";
+import cat1 from "./catImages/293931.svg";
 
 class Component1 extends Component {
   componentDidMount() {
@@ -24,11 +25,7 @@ class Component1 extends Component {
           Component 1
         </h2>
 
-        <ul>
-          <li><a href="./component2">Link to Component 2</a></li>
-          <li><a href="./component3">Link to Component 3</a></li>
-          <li><a href="./component4">Link to Component 4</a></li>
-        </ul>
+			   <img className="cat" src={cat1} alt="" />
 
       </div>
     );
