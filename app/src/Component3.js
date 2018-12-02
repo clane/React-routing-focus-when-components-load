@@ -3,6 +3,10 @@ import cat3 from "./catImages/44215.svg";
 import { Helmet } from "react-helmet";
 
 class Component3 extends Component {
+  componentDidMount() {
+    this.topHeading.focus();
+  }
+
   render() {
     return (
       <div className="child1">
@@ -11,7 +15,16 @@ class Component3 extends Component {
           <meta charSet="utf-8" />
           <title>Component 3</title>
         </Helmet>
-        <h2>Component 3</h2>
+
+        <h2
+          tabIndex="-1"
+          ref={componentH2 => {
+            this.topHeading = componentH2;
+          }}
+        >
+          Component 3{" "}
+        </h2>
+
         <img className="cat" src={cat3} alt="" />
       </div>
     );
