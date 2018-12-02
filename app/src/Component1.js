@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import { Helmet } from "react-helmet";
 
 class Component1 extends Component {
+  componentDidMount() {
+    this.topHeading.focus();
+  }
+
   render() {
     return (
       <div className="child1">
@@ -11,7 +15,15 @@ class Component1 extends Component {
           <title>Component 1</title>
         </Helmet>
 
-        <h2>Component 1</h2>
+        <h2
+          tabIndex="-1"
+          ref={componentH2 => {
+            this.topHeading = componentH2;
+          }}
+        >
+          Component 1
+        </h2>
+
         <ul>
           <li><a href="./component2">Link to Component 2</a></li>
           <li><a href="./component3">Link to Component 3</a></li>
