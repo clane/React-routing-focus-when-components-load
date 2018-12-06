@@ -5,8 +5,7 @@ import Component2 from "./Component2.js";
 import Component3 from "./Component3.js";
 import Component4 from "./Component4.js";
 import { Helmet } from "react-helmet";
-//import { BrowserRouter, Route, Switch, Link, Redirect } from "react-router-dom";
-import { BrowserRouter, Route, Switch, Link  } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Link, Redirect } from "react-router-dom";
 
 class App extends Component {
   render() {
@@ -43,6 +42,7 @@ class App extends Component {
               <Route path="/Component3" component={Component3} />
               <Route path="/Component4" component={Component4} />
 							{/*<Redirect from="/" to="/Component1" />*/}
+							<Redirect from="/" to="/" />
             </Switch>
           </div>
         </BrowserRouter>
