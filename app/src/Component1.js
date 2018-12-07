@@ -5,7 +5,7 @@ import cat1 from "./catImages/293931.svg";
 class Component1 extends Component {
   componentDidMount() {
     this.topHeading.focus();
-		this.props.ariaCurrentSetter();
+		this.props.ariaCurrentSetter("component1");
   }
 
   render() {

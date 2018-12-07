@@ -25,11 +25,37 @@ class App extends Component {
     this.ariaCurrentSetter = this.setCurrentRouterLink.bind(this);
   }
 
-  setCurrentRouterLink() {
+  setCurrentRouterLink(componentName) {
     console.log("test");
-		 this.setState({
-			 ariaCurrent1: "page", 
+		console.log(componentName); 
+		
+	  this.setState({
+			 ariaCurrent1: false, 
+			 ariaCurrent2: false, 
+			 ariaCurrent3: false, 
+			 ariaCurrent4: false, 
     });
+    
+		if(componentName === "component1"){
+			this.setState({
+				 ariaCurrent1: "page", 
+			});
+		}
+    if(componentName === "component2"){
+			this.setState({
+				 ariaCurrent2: "page", 
+			});
+		}
+    if(componentName === "component3"){
+			this.setState({
+				 ariaCurrent3: "page", 
+			});
+		}
+    if(componentName === "component4"){
+			this.setState({
+				 ariaCurrent4: "page", 
+			});
+		}
   }
 
   render() {
