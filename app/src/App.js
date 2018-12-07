@@ -26,9 +26,6 @@ class App extends Component {
   }
 
   setCurrentRouterLink(componentName) {
-    console.log("test");
-    console.log(componentName);
-
     this.setState({
       ariaCurrent1: null,
       ariaCurrent2: null,
@@ -66,7 +63,7 @@ class App extends Component {
           <meta charSet="utf-8" />
           <title>React Routing When Components Load</title>
         </Helmet>
-        <h1>React Routing When Components Load</h1>
+        <h1>A11y Routing with React</h1>
 
         <div>
           <a
