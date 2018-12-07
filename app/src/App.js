@@ -11,10 +11,10 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      ariaCurrent1: false,
-      ariaCurrent2: false,
-      ariaCurrent3: false,
-      ariaCurrent4: false
+      ariaCurrent1: null,
+      ariaCurrent2: null,
+      ariaCurrent3: null,
+      ariaCurrent4: null
     };
     // Create a ref to store the textInput DOM element
     this.link1 = React.createRef();
@@ -30,10 +30,10 @@ class App extends Component {
     console.log(componentName);
 
     this.setState({
-      ariaCurrent1: false,
-      ariaCurrent2: false,
-      ariaCurrent3: false,
-      ariaCurrent4: false
+      ariaCurrent1: null,
+      ariaCurrent2: null,
+      ariaCurrent3: null,
+      ariaCurrent4: null
     });
 
     if (componentName === "component1") {
