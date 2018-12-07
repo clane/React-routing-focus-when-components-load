@@ -27,35 +27,35 @@ class App extends Component {
 
   setCurrentRouterLink(componentName) {
     console.log("test");
-		console.log(componentName); 
-		
-	  this.setState({
-			 ariaCurrent1: false, 
-			 ariaCurrent2: false, 
-			 ariaCurrent3: false, 
-			 ariaCurrent4: false, 
+    console.log(componentName);
+
+    this.setState({
+      ariaCurrent1: false,
+      ariaCurrent2: false,
+      ariaCurrent3: false,
+      ariaCurrent4: false
     });
-    
-		if(componentName === "component1"){
-			this.setState({
-				 ariaCurrent1: "page", 
-			});
-		}
-    if(componentName === "component2"){
-			this.setState({
-				 ariaCurrent2: "page", 
-			});
-		}
-    if(componentName === "component3"){
-			this.setState({
-				 ariaCurrent3: "page", 
-			});
-		}
-    if(componentName === "component4"){
-			this.setState({
-				 ariaCurrent4: "page", 
-			});
-		}
+
+    if (componentName === "component1") {
+      this.setState({
+        ariaCurrent1: "page"
+      });
+    }
+    if (componentName === "component2") {
+      this.setState({
+        ariaCurrent2: "page"
+      });
+    }
+    if (componentName === "component3") {
+      this.setState({
+        ariaCurrent3: "page"
+      });
+    }
+    if (componentName === "component4") {
+      this.setState({
+        ariaCurrent4: "page"
+      });
+    }
   }
 
   render() {
@@ -130,11 +130,34 @@ class App extends Component {
                   />
                 )}
               />
-              {/*<Route path="/Component1" component={Component1} />*/}
-              <Route path="/Component2" component={Component2} />
-              <Route path="/Component3" component={Component3} />
-              <Route path="/Component4" component={Component4} />
-              {/*<Redirect from="/" to="/Component1" />*/}
+              <Route
+                path="/Component2"
+                render={props => (
+                  <Component2
+                    {...props}
+                    ariaCurrentSetter={this.ariaCurrentSetter}
+                  />
+                )}
+              />
+              <Route
+                path="/Component3"
+                render={props => (
+                  <Component3
+                    {...props}
+                    ariaCurrentSetter={this.ariaCurrentSetter}
+                  />
+                )}
+              />
+              <Route
+                path="/Component4"
+                render={props => (
+                  <Component4
+                    {...props}
+                    ariaCurrentSetter={this.ariaCurrentSetter}
+                  />
+                )}
+              />
+
               <Redirect from="/" to="/" />
             </Switch>
           </div>

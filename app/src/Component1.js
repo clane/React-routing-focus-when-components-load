@@ -5,7 +5,7 @@ import cat1 from "./catImages/293931.svg";
 class Component1 extends Component {
   componentDidMount() {
     this.topHeading.focus();
-		this.props.ariaCurrentSetter("component1");
+    this.props.ariaCurrentSetter("component1");
   }
 
   render() {
@@ -26,7 +26,7 @@ class Component1 extends Component {
           Component 1
         </h2>
 
-			   <img className="cat" src={cat1} alt="" />
+        <img className="cat" src={cat1} alt="" />
 
       </div>
     );

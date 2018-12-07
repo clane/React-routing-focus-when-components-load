@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet";
 class Component2 extends Component {
   componentDidMount() {
     this.topHeading.focus();
+    this.props.ariaCurrentSetter("component2");
   }
 
   render() {
