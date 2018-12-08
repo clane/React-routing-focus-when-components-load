@@ -3,6 +3,8 @@ For production builds you need to add the polyfill for Object.assign() below to 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#Polyfill
 
 
+<script>
+
 if (typeof Object.assign != 'function') {
   // Must be writable: true, enumerable: false, configurable: true
   Object.defineProperty(Object, "assign", {
@@ -33,3 +35,4 @@ if (typeof Object.assign != 'function') {
   });
 }
 
+</script>
