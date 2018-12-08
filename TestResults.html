@@ -3,6 +3,9 @@
 <head>
   <meta charset="utf-8">
   <title>Test Results for React-routing-focus-when-components-load</title>
+<style>
+.problem { border:2px solid red; } 
+</style>
 </head>
 <body>
   
@@ -24,22 +27,22 @@
     <li>Windows 7/Chrome Version 70/JAWS 2018 - Component headings are read correctly with Tab or Arrow keys, current page link is properly identified, focus moves correctly</li>
     <li>Windows 7/Chrome Version 70/NVDA 2018.3.2 - After a routing link is activated, focus moves to the newly loaded component's heading and it's contents and role are announced correctly. When using the up or down arrow, the primary navigation is read as a whole and the current page is identified</li>
     
-    <li>Windows 7/FireFox 62/JAWS 2018 - Focus moves to newly loaded component, but reads "Component 3 edit type and text", Tabbing to the current link reads as "component 2 current page link". Component headings are read correctly when using the up or down arrow keys to read them</li>
+    <li class="problem">Windows 7/FireFox 62/JAWS 2018 - Focus moves to newly loaded component, but reads "Component 3 edit type and text", Tabbing to the current link reads as "component 2 current page link". Component headings are read correctly when using the up or down arrow keys to read them</li>
     <li>Windows 7/FireFox 62/NVDA  2018.3.2 - After a routing link is activated focus moves correctly, the component heading's role and content is announced correctly. When using the up or down arrow keys or the Tab key to read the primary navigation region, all links are read correctly and the current page is identified.   </li>
     
-    <li>Windows 7/IE 11/JAWS 2018 - Focus moves to the heading of each component after routing to it, current routing link is announced as "current page link" when you Tab to it, and "link current page component 3" when using up or down arrows to read them</li>
-    <li>Windows 7/IE 11/NVDA  2018.3.2 - After a router link is acivated, such a s the link for component 4, focus moves to the component's heading, and "component 4 edit" is announced. When using the up or down arrow keys to read the primary navigation region, all the links are announced and the current link is identified.  </li>
-    
-    <li>macOS 10.13.6 High Sierra/VoiceOver - Focus is moving correctly but aria-current is not working</li>
-    
+    <li>Windows 7/IE 11/JAWS 2018 - Focus moves to the heading of each component after routing to it, current routing link is announced as "current page link" when you Tab to it, and "link current page component 3" is announced when using up or down arrows to read them</li>
+    <li class="problem">Windows 7/IE 11/NVDA  2018.3.2 - After a router link is acivated, such a s the link for component 4, focus moves to the component's heading, and "component 4 edit" is announced. When using the up or down arrow keys to read the primary navigation region, all the links are announced and the current link is identified.  </li>
+    <li class="problem">macOS 10.13.6 High Sierra/Safari 12.0.2 /VoiceOver - Down and Up arrow keys are not navigating static content. Tabbing accesses all links. Activating a router link focuses the header of the newly displayed component and it's contents are announced as expected. The current page link is NOT identified when it is focused. </li>
+    <li>macOS 10.13.6 High Sierra/Chrome 71.0.3578.80/VoiceOver - After activating a router link, focus moves to the newly displayed component and its heading's role and content is announced correctly. When tabbing to the current router link it is identified as the current link. The Up and Down arrow keys can access static content as expected.</li>
+   
   </ul>
   
   <h2>Mobile Screen Readers</h2>
   <ul>
     <li>iPhone iOS 12/VoiceOver - After routing, focus moves to the child component's h2 heading's role and its text is announced as expected. Additionally, the current routing link is visually underlined and announced by the screen reader as the current page</li>
     <li>iPad iOS 11/VoiceOver - After routing, focus moves to the child component's h2 heading's role and its text is announced as expected. Additionally, the current routing link is visually underlined and announced by the screen reader as the current page</li>
-    <li>Android 7/Chrome 70/Android Accessibility Suite 7.2/TalkBack - </li>
-    <li>Nexus 5 Phone Android 6.01 TalkBack 6.2/Chrome 70  - Focus is moving correctly but aria-current is not working</li>
+		<li class="problem">Android 7/Chrome 70/Android Accessibility Suite 7.2/TalkBack - After routing, focus moves to the child component's h2 heading's role and its text is announced as expected. Additionally, the current routing link is visually underlined but it is NOT  announced by the screen reader as the current page</li>
+    <li class="problem">Nexus 5 Phone Android 6.01 TalkBack 6.2/Chrome 70  - After routing, focus moves to the child component's h2 heading's role and its text is announced as expected. Additionally, the current routing link is visually underlined but it is NOT  announced by the screen reader as the current page</li>
   </ul>
 
 </body>
