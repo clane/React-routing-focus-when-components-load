@@ -76,7 +76,7 @@ class App extends Component {
         <BrowserRouter>
           <div>
 
-            <ul role="navigation">
+            <ul role="navigation" aria-label="primary navigation">
 
               <li>
                 <Link
