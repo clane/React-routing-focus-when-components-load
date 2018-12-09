@@ -28,7 +28,7 @@ time, mark, audio, video {
 
 /* begin page level styles */
 body { color:#000; background-color:#fff; min-height:1000px; } 
-#root { text-align:center; } 
+#root { width:90%; margin:auto; text-align:center; } 
 .App { 
     font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif; 
     letter-spacing: .01rem;
