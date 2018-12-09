@@ -22,13 +22,13 @@ time, mark, audio, video {
 
 /* begin focus styles */
 *:focus {
-		outline:5px dotted blue; 
+	outline: 5px dotted #00f;
 }
 /* end  focus styles */
 
 /* begin page level styles */
 body { color:#000; background-color:#fff; min-height:1000px; } 
-#root { width:960px; margin:auto; padding:50px;  min-height:900px; } 
+#root { width:960px; margin:auto; text-align:center; } 
 .App { 
     font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif; 
     letter-spacing: .01rem;
@@ -38,21 +38,21 @@ body { color:#000; background-color:#fff; min-height:1000px; }
     line-height: 1.58;
     letter-spacing: -.003em;
 }
+
+.component { border:3px solid #000; margin-top:20px;  } 
+
 /* end  page level styles */
 
 
 
-h1 { width:90%; font-weight:700; font-size:3rem; margin:10px 0 10px 0; } 
-h2 { width:60%; font-weight:700; font-size:2rem; margin:10px 0 10px 0; } 
+h1 {  font-weight:700; font-size:3rem; margin:10px 0 10px 0; } 
+h2 {  font-weight:700; font-size:2rem; margin:10px 0 10px 0; } 
 
-.cat { width:500px; height:500px; } 
+.cat { width:350px; height:350px; } 
 
 /* begin routing link styles */
-ul[role="navigation"] { margin:10px 0px 10px 0px; padding:0;  } 
-ul[role="navigation"]  li { background-color:yellow; width:23%; display:inline-block; list-style-type:none; margin-right:10px; margin-left:0; padding:0; margin-bottom:5px; } 
-ul[role="navigation"]  li:last-of-type { margin-right:0; } 
-ul[role="navigation"] li a { padding:0; text-decoration:none; color:#000; font-size:1.5rem; display:inline-block; width:220px; text-align:center; font-weight:700; } 
-ul[role="navigation"] li a[aria-current="page"] { text-decoration:underline; } 
+ul[role="navigation"]  { background-color:yellow; width:50%; margin:20px auto; padding:10px;  } 
+ul[role="navigation"]  li { list-style-type:none;  } 
 /* end routing link styles */
 
 

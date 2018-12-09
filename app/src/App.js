@@ -63,21 +63,20 @@ class App extends Component {
           <meta charSet="utf-8" />
           <title>React Routing When Components Load</title>
         </Helmet>
-        <h1>A11y Routing with React</h1>
-
-        <div>
-          <a
-            href="https://github.com/clane/React-routing-focus-when-components-load"
-          >
-            https://github.com/clane/React-routing-focus-when-components-load
-          </a>
+        <div role="banner" aria-label="A11y routing time">
+          <h1>A11y Routing with React</h1>
+          <div>
+            <a
+              href="https://github.com/clane/React-routing-focus-when-components-load"
+            >
+              https://github.com/clane/React-routing-focus-when-components-load
+            </a>
+          </div>
         </div>
 
         <BrowserRouter>
           <div>
-
             <ul role="navigation" aria-label="primary navigation">
-
               <li>
                 <Link
                   aria-current={this.state.ariaCurrent1}
@@ -114,49 +113,50 @@ class App extends Component {
                   Component 4
                 </Link>
               </li>
-
             </ul>
 
-            <Switch>
-              <Route
-                path="/Component1"
-                render={props => (
-                  <Component1
-                    {...props}
-                    ariaCurrentSetter={this.ariaCurrentSetter}
-                  />
-                )}
-              />
-              <Route
-                path="/Component2"
-                render={props => (
-                  <Component2
-                    {...props}
-                    ariaCurrentSetter={this.ariaCurrentSetter}
-                  />
-                )}
-              />
-              <Route
-                path="/Component3"
-                render={props => (
-                  <Component3
-                    {...props}
-                    ariaCurrentSetter={this.ariaCurrentSetter}
-                  />
-                )}
-              />
-              <Route
-                path="/Component4"
-                render={props => (
-                  <Component4
-                    {...props}
-                    ariaCurrentSetter={this.ariaCurrentSetter}
-                  />
-                )}
-              />
+            <div role="main" aria-label="components go here">
 
-              <Redirect from="/" to="/" />
-            </Switch>
+              <Switch>
+                <Route
+                  path="/Component1"
+                  render={props => (
+                    <Component1
+                      {...props}
+                      ariaCurrentSetter={this.ariaCurrentSetter}
+                    />
+                  )}
+                />
+                <Route
+                  path="/Component2"
+                  render={props => (
+                    <Component2
+                      {...props}
+                      ariaCurrentSetter={this.ariaCurrentSetter}
+                    />
+                  )}
+                />
+                <Route
+                  path="/Component3"
+                  render={props => (
+                    <Component3
+                      {...props}
+                      ariaCurrentSetter={this.ariaCurrentSetter}
+                    />
+                  )}
+                />
+                <Route
+                  path="/Component4"
+                  render={props => (
+                    <Component4
+                      {...props}
+                      ariaCurrentSetter={this.ariaCurrentSetter}
+                    />
+                  )}
+                />
+                <Redirect from="/" to="/" />
+              </Switch>
+            </div>
           </div>
         </BrowserRouter>
 
