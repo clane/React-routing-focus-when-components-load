@@ -27,6 +27,9 @@ class Component4 extends Component {
         </h2>
 
         <img className="cat" src={cat4} alt="" />
+        <p>
+          What's up! I'm Kitty #288702. I'm a professional Culinary Sanitation Specialist and I love lasagna. When I'm not riding the bus, I'm siring for status! We're so fur-tunate to have found each other!
+        </p>
       </div>
     );
   }
