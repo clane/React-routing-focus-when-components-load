@@ -1,71 +1,15 @@
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, 
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
 
-/* begin focus styles */
-*:focus {
-	outline: 5px dotted #00f;
-}
-/* end  focus styles */
-
-/* begin page level styles */
-body { color:#000; background-color:#fff; min-height:1000px; } 
 #root { width:90%; margin:auto; text-align:center; } 
-.App { 
-    font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif; 
-    letter-spacing: .01rem;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.5rem;
-    line-height: 1.58;
-    letter-spacing: -.003em;
+.cat { width:150px; height:150px; } 
+div[role="main"] { border:2px solid #000; }
+*:focus {
+  outline: 3px dotted #00f;
 }
 
-.component { border:3px solid #000; margin-top:20px;  } 
-
-/* end  page level styles */
-
-
-
-h1 {  font-weight:700; font-size:3rem; margin:10px 0 10px 0; } 
-.child1 h2 { width:30%; font-weight:700; font-size:2rem; margin:10px auto; } 
-
-.cat { width:350px; height:350px; } 
 
 /* begin routing link styles */
-ul[role="navigation"]  { background-color:yellow; width:50%; margin:20px auto; padding:10px;  } 
+ul[role="navigation"]  { background-color:yellow; margin:20px auto; padding:10px;  } 
 ul[role="navigation"]  li { list-style-type:none;  } 
 /* end routing link styles */
-
-
-.offscreenText {
-position: absolute;
-clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-clip: rect(1px, 1px, 1px, 1px);
-clip-path: inset(50%);
-padding: 0;
-border: 0;
-height: 1px; 
-width: 1px; 
-overflow: hidden;
-white-space: nowrap;
-}
 
