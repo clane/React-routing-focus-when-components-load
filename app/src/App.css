@@ -1,15 +1,11 @@
 
 
 #root { width:90%; margin:auto; text-align:center; } 
-.cat { width:150px; height:150px; } 
-div[role="main"] { border:2px solid #000; }
-*:focus {
-  outline: 3px dotted #00f;
-}
-
+.cat { width:150px; height:150px; }
 
 /* begin routing link styles */
-ul[role="navigation"]  { background-color:yellow; margin:20px auto; padding:10px;  } 
+ul[role="navigation"]  { border:2px solid #000;  margin:20px auto; padding:10px;  } 
 ul[role="navigation"]  li { list-style-type:none;  } 
 /* end routing link styles */
 
+div[role="main"] { border:2px solid #000; min-height:300px; } 
