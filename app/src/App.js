@@ -19,19 +19,13 @@ class App extends Component {
       ariaCurrent4: null
     };
 
-    //Element references to router links
-    this.link1 = React.createRef();
-    this.link2 = React.createRef();
-    this.link3 = React.createRef();
-    this.link4 = React.createRef();
-
     /*Setting a local property to reference the function that sets aria-current. This property will be passed to the child components when routing*/
     this.ariaCurrentSetter = this.setCurrentRouterLink.bind(this);
 
     this.ie11Polyfill();
   }
 
-  //Set aria-current	 
+  //Set aria-current
   setCurrentRouterLink(componentName) {
     //Reset aria-current on all router links first
     this.setState({
@@ -40,7 +34,8 @@ class App extends Component {
       ariaCurrent3: null,
       ariaCurrent4: null
     });
-
+    
+		{/*Set the aria-current property to "page" for the router link that matches componentName */}
     if (componentName === "component1") {
       this.setState({
         ariaCurrent1: "page"
@@ -121,38 +116,22 @@ class App extends Component {
           <div>
             <ul role="navigation" aria-label="primary navigation">
               <li>
-                <Link
-                  aria-current={this.state.ariaCurrent1}
-                  ref={this.link1}
-                  to="Component1"
-                >
+                <Link aria-current={this.state.ariaCurrent1} to="Component1">
                   Component 1
                 </Link>
               </li>
               <li>
-                <Link
-                  aria-current={this.state.ariaCurrent2}
-                  ref={this.link2}
-                  to="Component2"
-                >
+                <Link aria-current={this.state.ariaCurrent2} to="Component2">
                   Component 2
                 </Link>
               </li>
               <li>
-                <Link
-                  aria-current={this.state.ariaCurrent3}
-                  ref={this.link3}
-                  to="Component3"
-                >
+                <Link aria-current={this.state.ariaCurrent3} to="Component3">
                   Component 3
                 </Link>
               </li>
               <li>
-                <Link
-                  aria-current={this.state.ariaCurrent4}
-                  ref={this.link4}
-                  to="Component4"
-                >
+                <Link aria-current={this.state.ariaCurrent4} to="Component4">
                   Component 4
                 </Link>
               </li>
@@ -161,6 +140,7 @@ class App extends Component {
             <div role="main" aria-label="components go here">
 
               <Switch>
+			          {/*Passing the method this.ariaCurrentSetter which sets aria-current to the child component as a property named ariaCurrentSetter */} 
                 <Route
                   path="/Component1"
                   render={props => (
