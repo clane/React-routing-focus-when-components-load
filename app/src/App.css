@@ -13,3 +13,5 @@ div[role="main"] { border:2px solid #000; min-height:300px; }
 *:focus {
 	outline: 3px dotted #00f;
 }
+
+a[aria-current="page"] { font-weight:bold; } 
