@@ -25,7 +25,7 @@ class App extends Component {
     this.link3 = React.createRef();
     this.link4 = React.createRef();
 
-    /*Setting a local property to reference the function that sets aria-current.    .This property will be passed to the child components when routing*/
+    /*Setting a local property to reference the function that sets aria-current. This property will be passed to the child components when routing*/
 
     this.ariaCurrentSetter = this.setCurrentRouterLink.bind(this);
 
