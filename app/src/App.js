@@ -25,7 +25,7 @@ class App extends Component {
     this.ie11Polyfill();
   }
 
-  //Set aria-current	 
+  //Set aria-current
   setCurrentRouterLink(componentName) {
     //Reset aria-current on all router links first
     this.setState({
@@ -115,34 +115,22 @@ class App extends Component {
           <div>
             <ul role="navigation" aria-label="primary navigation">
               <li>
-                <Link
-                  aria-current={this.state.ariaCurrent1}
-                  to="Component1"
-                >
+                <Link aria-current={this.state.ariaCurrent1} to="Component1">
                   Component 1
                 </Link>
               </li>
               <li>
-                <Link
-                  aria-current={this.state.ariaCurrent2}
-                  to="Component2"
-                >
+                <Link aria-current={this.state.ariaCurrent2} to="Component2">
                   Component 2
                 </Link>
               </li>
               <li>
-                <Link
-                  aria-current={this.state.ariaCurrent3}
-                  to="Component3"
-                >
+                <Link aria-current={this.state.ariaCurrent3} to="Component3">
                   Component 3
                 </Link>
               </li>
               <li>
-                <Link
-                  aria-current={this.state.ariaCurrent4}
-                  to="Component4"
-                >
+                <Link aria-current={this.state.ariaCurrent4} to="Component4">
                   Component 4
                 </Link>
               </li>
