@@ -17,6 +17,8 @@ class Component1 extends Component {
           <title>Component 1</title>
         </Helmet>
 
+
+        {/* Assinging a reference to this element to the topHeading property */}
         <h2
           tabIndex="-1"
           ref={componentH2 => {
