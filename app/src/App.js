@@ -140,11 +140,7 @@ class App extends Component {
             <div role="main" aria-label="components go here">
 
               <Switch>
-<<<<<<< HEAD
 			          {/*Passing the method this.ariaCurrentSetter which sets aria-current to the child component as a property named ariaCurrentSetter */} 
-=======
-			          {/*Passing the method this.ariaCurrentSetter which sets aria-current to the child component as a propert named ariaCurrentSetter */} 
->>>>>>> 9ea5d4854595ca3bfdb101b0e99fcdf61d6bdcea
                 <Route
                   path="/Component1"
                   render={props => (
