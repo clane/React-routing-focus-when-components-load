@@ -10,24 +10,30 @@ import { BrowserRouter, Route, Switch, Link, Redirect } from "react-router-dom";
 class App extends Component {
   constructor(props) {
     super(props);
+
+    //Initialize aria-current values
     this.state = {
       ariaCurrent1: null,
       ariaCurrent2: null,
       ariaCurrent3: null,
       ariaCurrent4: null
     };
-    // Create a ref to store the textInput DOM element
+
+    //Element references to router links
     this.link1 = React.createRef();
     this.link2 = React.createRef();
     this.link3 = React.createRef();
     this.link4 = React.createRef();
 
+    //Setting a local property to reference the function that sets aria-current.    //This property will be passed to the child components when routing 
     this.ariaCurrentSetter = this.setCurrentRouterLink.bind(this);
 
     this.ie11Polyfill();
   }
 
+  //Set aria-current	 
   setCurrentRouterLink(componentName) {
+    //Reset aria-current on all router links first
     this.setState({
       ariaCurrent1: null,
       ariaCurrent2: null,
