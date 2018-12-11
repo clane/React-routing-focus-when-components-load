@@ -34,7 +34,8 @@ class App extends Component {
       ariaCurrent3: null,
       ariaCurrent4: null
     });
-
+    
+		{/*Set the aria-current property to "page" for the router link that matches componentName */}
     if (componentName === "component1") {
       this.setState({
         ariaCurrent1: "page"
@@ -139,6 +140,7 @@ class App extends Component {
             <div role="main" aria-label="components go here">
 
               <Switch>
+			          {/*Passing the method this.ariaCurrentSetter which sets aria-current to the child component as a propert named ariaCurrentSetter */} 
                 <Route
                   path="/Component1"
                   render={props => (
